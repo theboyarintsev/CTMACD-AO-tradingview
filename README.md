@@ -1,4 +1,4 @@
-# Awesome Oscillator & MACD Cross Tactic
+# AO & CDMACD Script
 
 [Link to the script on TradingView](https://ru.tradingview.com/script/PqzwHwRT-ctmacd-ao/)
 
