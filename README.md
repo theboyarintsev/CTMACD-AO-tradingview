@@ -23,95 +23,94 @@ An oscillator consists of 4 main components:
 - Intersections of MACD lines - Main and Signal
 - Cloud of Rapid Reaction Zone - optional
 
-The AO histogram is plotted according to the classic formula, based on the SMA with periods of 34 and 5. The MACD is plotted on the EMAs of 12, 26 and 9.
+A.O. the histogram is built using the classic formula, based on SMA with periods of 34 and 5. The MACD is plotted on the EMAs from 12, 26 and 9.
 
-**Rapid Reaction Zone** - an optional field that can be enabled in the script settings (Risky Pro mode). This zone is calculated as SMA of AO with a period of 21 and subsequent correction by 50% (these values can be changed). The purpose of the Rapid Reaction Zone is to mark an area where the signal often likes to reverse without breaking through the 0 axis. More details on how to work with it will be described below in the strategies section.
+**Rapid Reaction Zone** - an optional field that can be enabled in the script settings (Risky Mode Pro). This zone is calculated as SMA AO with a period of 21 followed by a 50% correction (these values are subject to change). The goal of the reaction zone is to Rapid to mark the area where the signal often likes the opposite, without breaking through the 0 axis. More details on how to work with it will be described below in the strategy section.
 
-There are also additional symbols presented in the composite chart, which should serve as visual markers:
+There are also additional symbols provided in the pivot graphic to serve as visual markers:
 
-1. **Green / red dots** - bullish or bearish MACD line crossover
-2. **Green / red plus sign** - a potential trend confirmation point and a possible point for entering a position. It is placed at the intersection of the AO zero axis or when the MACD line crosses the Rapid Reaction Zone.
-3. **Green / red flag with a highlighted column** - the most risky, but profitable entry point. Russian roulette. It is activated only in risky mode. It is formed only when the MACD lines cross at a level that is at least 75% of the previous AO high / low over the past 50 periods. At the same time, the intersection itself must be 2 times further from the borders of the Rapid Reaction Zone. This signal is best combined with RSI and STOCH. Its goal: to catch the maximum bounce in strong oversold / overbought conditions.
-4. **Green / Red Saucer Diamond** - "Tea Saucer" shape on the Awesome Oscillator. It is often worked out within a limited timeframe. For example, a saucer on a 1H chart is better to be within a specific day.
-5. **Yellow dot** - potential point of closing a deal with the lowest risk. It is considered as the intersection of the MACD and AO histograms.
-6. **Purple dot** - a possible closing point with a slightly higher risk. It is considered as the intersection of the MACD line with the MACD histogram.
+1. **Green / red dots** - bullish or bearish MACD crossover line
+2. **Green / red plus sign** - a potential trend confirmation point and a possible position entry point. It is located at the intersection of the O-axis zero or when the MACD line crosses the Rapid reaction zone.
+3. **Green / red flag with a highlighted column** - the most risky but profitable entry point. Russian roulette. It is activated only in a risky mode. It is only formed when the MACD lines cross at a level that is at least 75% of the previous AO high / low in the last 50 periods. At the same time, the crossing itself should be 2 times farther from the borders of the rapid response zone. This signal works best with RSI and STOCH. Its purpose: to catch maximum rejections in strong oversold / overbought conditions.
+4. **Green / Red Saucer Diamond** - Tea saucer shape on the Awesome Oscillator. This is often completed within a limited time frame. For example, a saucer on a 1-hour chart is best placed within a specific day.
+5. **Yellow dot** - the potential closing point of the trade with the lowest risk. It is considered to be the intersection of the MACD and AO histograms.
+6. **Purple dot** - a possible close with a slightly higher risk. This is considered to be the intersection of the MACD line with the MACD histogram.
 
-The dots only serve as visual markers, not calls to action. Keep this in mind.
+Dots serve only as visual markers, do not trigger action. Keep this in mind.
 
 ## How to use
 
-The main principle is to form confidence in the formation of a local trend. The markers on the graph will help with this. But there are also some points worth paying attention to.
+The basic principle is to build confidence in the formation of a local trend. The markers on the graph will help with this. But there are some points worth paying attention to.
 
 ### Wide spread
 
-The AO columns and the MACD histogram should be larger than the reaction zone. In other words, higher volatility. Here is a **correct example** where very strong signals are present due to volatility:
+The AO columns and MACD histogram should be larger than in the reaction zone. In other words, higher volatility. Here is a ** correct example ** where there are very strong signals due to volatility:
 
 ![Wide](doc/img/wide.png)
 
-But at such moments it is better not to do anything when the channel becomes narrower:
+But at such moments it is better not to do anything when the channel is narrowing:
 
 ![Narrow](doc/img/narrow.png)
 
-If a plus sign is formed in a narrow channel without a preceding point (of the same color), it is highly discouraged to enter a trade.
+If a plus sign is forming in a narrow channel without a preceding dot (of the same color), it is highly recommended to enter the trade.
 
 ### Focus on MACD
 
-Sometimes you can close a trade without waiting for a MACD reversal signal. For example, when the lines are dangerously close. This confidence can be reinforced with RSI and STOCH.
+Sometimes you can close a trade without waiting for the MACD reversal signal. For example, when the lines are dangerously close. This confidence can be enhanced with RSI and Stoch.
 
 ### Divergences
 
-Since the main structure of the oscillator is based on AO and MACD, nobody canceled their classic divergences. Divergences should also be taken into account when forming your opinion regarding the future price movement.
+Since the main structure of the generator is based on AO and MACD, nobody canceled their classic divergences. Differences should also be taken into account when forming your opinion about future price movements.
 
-This chart demonstrates the divergence options for the Awesome Oscillator and their processing along with the main script signals:
+This diagram shows the divergence options for the Awesome Oscillator and their processing along with the main scenario signals:
 
 ![AO Divergence](doc/img/divergence.png)
 
-Bullish divergence is confirmed by the oscillator signals (green plus signs). Likewise, the bearish divergence, within which the bullish "tea saucer" even manages to work out, just before the price decline.
+The bullish divergence is confirmed by the signal generator (green plus signs). Likewise, bearish divergence, in which the bullish tea saucer even manages to work, just before the price falls.
 
 ### MACD angle
 
-When the first plus sign appears to enter a trade, you need to carefully monitor the angle of attack of the blue MACD line. If the line approaches the axis almost parallel, it is better not to enter a trade, since at any moment the situation may turn not in your direction.
+When the first plus sign to enter a trade, the angle of attack of the blue MACD line must be carefully controlled. If the line approaches the axis almost parallel, then it is better not to enter into a trade, since at any moment the situation may not be in your direction.
 
 ### Caution: step down
 
-Sometimes on the oscillator you can find a step formed from the blue MACD line, which lies below 0 degrees on the AO columns. Trade entries should be avoided when a step is formed, as this could signal a reversal against you. To be sure, it is worth checking the situation on lower timeframes.
+Sometimes on the generator, you can find a step formed by the blue MACD line, which is below 0 degrees along the AO columns. You should avoid entering a trade when the step is forming, as this could signal a reversal against you. Of course, it is worth checking the situation on smaller timeframes.
 
 ![Step](doc/img/ledder.png)
 
 ## Possible strategies
 
-This script provides two main strategies: simple conservative and risky (pro). For a simple strategy, a minimum of information is provided - a signal to confirm a reversal appears closer to the end of the movement itself. Using it, you can enter fast trades for 0.5% -2% profit with a stop at breakeven. The risky strategy is somewhat more complicated. More details about them below.
+This scenario involves two main strategies: the simple conservative and the risky (Pro). For a simple strategy, a minimum of information is provided - a signal to confirm a reversal appears near the end of the movement itself. With its help, you can enter fast trades for 0.5% -2% profit with a stop at breakeven. The risky strategy is somewhat more complicated. More about them below.
 
 ### Simple conservative
 
-You are looking for the green MACD crosspoint in the negative zone and waiting for confirmation from the AO. When the AO turns in the positive direction (forms a plus sign on the axis), we enter the trade.
+You are looking for the green crossover point of MACD in the negative zone and are waiting for confirmation from the AO. When the AO turns in the positive direction (forms plus a sign on the axis), we enter a trade.
 
 The closest point to exit the trade will be highlighted in yellow. The example below illustrates this situation.
 
 ![Normal mode](doc/img/normal.png)
 
-To the left of a successful deal, you can draw attention to a failed one. In this case, you should always pay attention to the angle at which the blue MACD line approaches the axis.
+To the left of a successful transaction, you can draw attention to a failed one. In this case, you should always pay attention to the angle at which the blue MACD line approaches the axis.
 
 ### Risky strategy
 
-In order to enable it, you need to open the script settings and check the boxes as in the example below:
-
+In order to enable it, you need to open the script settings and checkboxes, as in the example below:
 ![Settings](doc/img/settings.png)
 
-The task of a risky strategy is to find as many reversal signals as possible before it is confirmed in order to take a larger profit.
+The challenge for a risky strategy is to find as many reversal signals as possible before it is confirmed in order to take big profits.
 
-MACD signals are filtered by the Rapid Reaction Zone. The entry point can be the intersection of the MACD line of this zone (plus sign).
+MACD signals are filtered by Rapid Response Zone. The entry point may be the intersection of the MACD line of this zone (plus sign).
 
-An alternative entry point can be a point with a game of Russian roulette, in the hope of catching a good bounce. The figure shows three entry points at once - roulette, risky and conservative. The exit point is purple.
+An alternative entry point could be a Russian roulette game in the hopes of catching a good bounce. The figure shows three entry points at once - roulette, risky and conservative. The exit point is purple.
 
 ![roulette](doc/img/risky.png)
 
-The higher the risk, the greater the profit and the earlier the entry. As well as a potential loss.
+The higher the risk, the greater the profit and the earlier the entry. As well as potential losses.
 
-In other cases, you must also look for divergences and "saucers" to support your theory.
+In other cases, you should also look for divergences and plates to support your theory.
 
-**What is the main catch of the risk strategy?** And the fact is that for each stock and each timeframe, you should manually select the parameters of the response zone. You should adjust the number of periods at your discretion. The greatest attention should be paid to the size of this zone.
+** What is the main catch of a risk management strategy? ** And the fact is that for each stock and each timeframe, you have to manually select the parameters of the reaction zone. The number of periods should be adjusted at your discretion. The greatest attention should be paid to the size of this zone.
 
-The smaller the response zone, the lower the risk of the transaction. The size of the zone should be selected individually - evaluate on the history of the stock how many unsuccessful transactions could have been avoided with a smaller zone? This point is as subjective as possible, but important. The size of the zone influences, among other things, the calculation of risk entry points of the "roulette" type.
+The smaller the response zone, the lower the risk of the transaction. The size of the zone should be selected individually - to evaluate according to the history of the stock, how many unsuccessful deals could have been avoided with a smaller zone? This point is as subjective as possible, but important. The size of the influence zone is, among other things, the calculation of the entry points of the roulette-type risk.
 
-> The material is based solely on the experience of the author. Not an individual investment recommendation.
+> > Material is based solely on the experience of the author. Not individual investment advice.
