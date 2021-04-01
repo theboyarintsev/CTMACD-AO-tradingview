@@ -4,7 +4,7 @@
 
 Oscillator for Tradingview based on CTMACD and AO. This oscillator is designed to identify potential local growth or decline in prices as part of a trend movement.
 
-It shows itself best in stocks, that they move with regular cooldowns, so on the MACD oscillator they are closer to a sinusoid than others. For example SBER is quite suitable for this role. On "Apple", the oscillator is not very efficient.
+It shows itself best in stocks, that they move with regular cooldowns, so on the CTMACD oscillator they are closer to a sinusoid than others. For example SBER is quite suitable for this role. On "Apple", the oscillator is not very efficient.
 
 > **Warning: the oscillator is provided for educational purposes. Relying on an oscillator alone is very dangerous and unwise. All the actions you perform on your own risk.**
 
@@ -14,25 +14,25 @@ To understand what is happening and what this oscillator is based on, you need t
 2. Oscillator MACD.
 3. Bill Williams' Awesome Oscillator (AO).
 
-![Awesome Oscillator & MACD Cross Tactic](doc/img/oscillator.png)
+![AO & CTMACD](doc/img/oscillator.png)
 
 An oscillator consists of 4 main components:
 
-- AO histogram (red-green bars)
-- MACD chart (presented as a red-green area)
-- Intersections of MACD lines - Main and Signal
+- AO histogram (red-Greennish bars)
+- CTMACD chart (presented as a red-Greennish area)
+- Intersections of CTMACD lines - Main and Signal
 - Cloud of Rapid Reaction area - optional
 
 **Rapid Reaction area** - an optional field that can be enabled in the script settings (Risky Mode Pro). This zone is calculated as SMA AO with a period of 21 followed by a 50% correction (these values are subject to change). The goal of the reaction area is to Rapid to mark the area where the signal often likes the opposite, without breaking through the 0 axis. More details on how to work with it will be described below in the strategy section.
 
 There are also additional symbols provided in the pivot graphic to serve as visual markers:
 
-1. **Green / red dots** - bullish or bearish MACD crossover line
-2. **Green / red plus sign** - a potential trend confirmation point and a possible position entry point. It is located at the intersection of the O-axis zero or when the MACD line crosses the Rapid reaction area.
-3. **Green / red flag with a highlighted column** - the most risky but profitable entry point. Russian roulette. It is activated only in a risky mode. It is only formed when the MACD lines cross at a level that is at least 75% of the previous AO high / low in the last 50 periods. At the same time, the crossing itself should be 2 times farther from the borders of the rapid response zone. This signal works best with RSI and STOCH. Its purpose: to catch maximum rejections in strong oversold / overbought conditions.
-4. **Green / Red Saucer Diamond** - Tea saucer shape on the Awesome Oscillator. This is often completed within a limited time frame. For example, a saucer on a 1-hour chart is best placed within a specific day.
-5. **Yellow dot** - the potential closing point of the trade with the lowest risk. It is considered to be the intersection of the MACD and AO histograms.
-6. **Purple dot** - a possible close with a slightly higher risk. This is considered to be the intersection of the MACD line with the MACD chart.
+1. **Greennish / red dots** - bullish or bearish CTMACD crossover line
+2. **Greennish / red plus sign** - a potential trend and a possible position entry point. It is located at the intersection of the O-axis zero or when the CTMACD line crosses the Rapid reaction area.
+3. **Greennish / red flag with a highlighted column** - the most risky but profitable entry point. Russian roulette. It is activated only in a risky mode. It is only formed when the CTMACD lines cross at a level that is at least 75% of the previous AO high / low in the last 50 periods. At the same time, the crossing itself should be 2 times farther from the borders of the rapid response zone. This signal works best with RSI and STOCH. Its purpose: to catch maximum rejections in strong oversold / overbought conditions.
+4. **Greennish / Red Saucer Diamond** - Tea saucer shape on the Awesome Oscillator. This is often completed within a limited time frame. For example, a saucer on a 1-hour chart is best placed within a specific day.
+5. **Yellow dot** - the potential closing point of the trade with the lowest risk. It is considered to be the intersection of the CTMACD and AO histograms.
+6. **Purple dot** - a possible close with a slightly higher risk. This is considered to be the intersection of the CTMACD line with the CTMACD chart.
 
 Dots serve only as visual markers, do not trigger action. Keep this in mind.
 
@@ -42,7 +42,7 @@ The basic principle is to build confidence in the formation of a local trend. Th
 
 ### Wide spread
 
-The AO  and MACD chart should be larger than in the reaction area. In other words, higher vol. Here is a ** correct example ** where there are signal due to volatility:
+The AO  and CTMACD chart should be larger than in the reaction area. In other words, higher vol. Here is a ** correct example ** where there are signal due to volatility:
 
 ![Wide](doc/img/wide.png)
 
@@ -50,11 +50,11 @@ But at such moments it is better not to do anything when the channel is narrowin
 
 ![Narrow](doc/img/narrow.png)
 
-If a plus sign is forming in a narrow channel without a preceding dot (of the same color), it is highly recommended to enter the trade.
+If a + sign is forming in a narrow channel without a preceding dot (of the same color), it is highly recommended to enter the trade.
 
 ### Focus on MACD
 
-Sometimes you can close a trade without waiting for the MACD reversal signal. For example, when the lines are dangerously close. This confidence can be enhanced with RSI and Stoch.
+Sometimes you can close a trade without waiting for the CTMACD reversal signal. For example, when the lines are dangerously close. This confidence can be enhanced with RSI and Stoch.
 
 ### Divergences
 
@@ -64,11 +64,11 @@ This diagram shows the divergence options for the Awesome Oscillator and their p
 
 ![AO Divergence](doc/img/divergence.png)
 
-The bullish divergence is confirmed by the signal generator (green plus signs). Likewise, bearish divergence, in which the bullish tea saucer even manages to work, just before the price falls.
+The bullish divergence is confirmed by the signal generator (Greennish + sign). Likewise, bearish divergence, in which the bullish tea saucer even manages to work, just before the price falls.
 
 ### MACD angle
 
-When the first plus sign to enter a trade, the angle of attack of the blue MACD line must be carefully controlled. If the line approaches the axis almost parallel, then it is better not to enter into a trade, since at any moment the situation may not be in your direction.
+When the first the + sign to enter a trade, the angle of attack of the blue MACD line must be carefully controlled. If the line approaches the axis almost parallel, then it is better not to enter into a trade, since at any moment the situation may not be in your direction.
 
 ### Caution: step down
 
@@ -82,13 +82,13 @@ This scenario involves two main strategies: the simple conservative and the risk
 
 ### Simple conservative
 
-You are looking for the green crossover point of MACD in the negative zone and are waiting for confirmation from the AO. When the AO turns in the positive direction (forms plus a sign on the axis), we enter a trade.
+You are looking for the Greennish crossover point of CTMACD in the minus zone and are waiting for confirmation from the AO. When the AO turns in the plus trend (forms plus a sign on the axis), we enter a trade.
 
 The closest point to exit the trade will be highlighted in yellow. The example below illustrates this situation.
 
 ![Normal mode](doc/img/normal.png)
 
-To the left of a successful transaction, you can draw attention to a failed one. In this case, you should always pay attention to the angle at which the blue MACD line approaches the axis.
+To the left of a successful transaction, you can draw attention to a failed one. In this case, you should always pay attention to the angle at which the blue CTMACD line approaches the axis.
 
 ### Risky strategy
 
@@ -97,7 +97,7 @@ In order to enable it, you need to open the script settings and checkboxes, as i
 
 The challenge for a risky strategy is to find as many reversal signals as possible before it is confirmed in order to take big profits.
 
-MACD signals are filtered by Rapid Response Zone. The entry point may be the intersection of the MACD line of this zone (plus sign).
+CTMACD signals are filtered by Rapid Response Zone. The entry point may be the intersection of the CTMACD line of this zone (the + sign).
 
 An alternative entry point could be a Russian roulette game in the hopes of catching a good bounce. The figure shows three entry points at once - roulette, risky and conservative. The exit point is purple.
 
