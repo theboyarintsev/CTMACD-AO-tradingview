@@ -1,6 +1,5 @@
 # AO & CDMACD Script
 
-[Link to the script on TradingView](https://ru.tradingview.com/script/PqzwHwRT-ctmacd-ao/)
 
 Oscillator for Tradingview based on CTMACD and AO. This oscillator is designed to identify potential local growth or decline in prices as part of a trend movement.
 
